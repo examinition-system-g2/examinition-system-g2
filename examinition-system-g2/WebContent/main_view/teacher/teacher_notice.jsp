@@ -10,7 +10,7 @@
 <jsp:include page="teacher_index.jsp"></jsp:include>
 	<div class="container">
 		<div class="alert navbar-inverse"
-			style="background-color: #eeeeee; margin-top: 20px">
+			style="background-color: #eeeeee; margin-top: 10px">
 			<strong style="margin-left: 20px; font-size: 18px">新增通知消息</strong>
 			<form class="form-inline" role="form" action="../../teacherInformation" method="post"
 				style="margin-left: 20px; margin-top: 5px;">

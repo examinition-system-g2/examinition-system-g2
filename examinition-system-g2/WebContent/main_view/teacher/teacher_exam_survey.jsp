@@ -43,7 +43,7 @@
 <div class="container">
 	<div class="col-md-12" style="padding-left: 5px; padding-right: 5px;display: <%if(examname==null) out.print("null");%>>">
 			<div class="alert navbar-inverse "
-				style="background-color: #eeeeee; height: 200px; margin-top: 20px;">
+				style="background-color: #eeeeee; height: 200px; margin-top: 10px;">
 				<strong style="margin-left: 20px; font-size: 18px">
 				<span>考试 </span><%if(examname!=null) out.print(examname);%><!--  得到该场考试的信息-->
 				进行情况：</strong>

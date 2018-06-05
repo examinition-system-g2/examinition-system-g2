@@ -15,7 +15,7 @@
 	</div>
 	<div class="container">
 		<div class="alert navbar-inverse"
-			style="background-color: #eeeeee; margin-top: 20px">
+			style="background-color: #eeeeee; margin-top: 10px">
 			<strong style="margin-left: 20px; font-size: 18px">添加单个学生</strong>
 			<form class="form-inline" role="form"
 				style="margin-left: 20px; margin-top: 5px;"

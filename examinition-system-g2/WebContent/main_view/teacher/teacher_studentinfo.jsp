@@ -11,7 +11,7 @@
 	<jsp:include page="teacher_index.jsp"></jsp:include>
 	<div class="container">
 		<div class="alert navbar-inverse"
-			style="background-color: #eeeeee; margin-top: 20px">
+			style="background-color: #eeeeee; margin-top: 10px">
 			<strong style="margin-left: 20px; font-size: 18px">当前考试:<%=session.getAttribute("studentinfo") %></strong>
 			<strong style="margin-left: 20px; font-size: 18px">添加单个学生</strong>
 			<form class="form-inline" role="form"
@@ -32,9 +32,12 @@
 				<th class="col-md-3">学号</th>
 				<th class="col-md-3">姓名</th>
 				<th class="col-md-3">班级</th>
+				<th class="col-md-3">考试</th>
+				
 			</tr>
 			<%
 				StringBuilder sb = (StringBuilder) session.getAttribute("info");
+				/* sb.append("examname"); */
 				out.print(sb);
 			%>
 		</table>

@@ -115,7 +115,7 @@ function check_all() {
 				<label class="col-sm-2 control-label">用户名</label>
 					<div class="col-sm-10">
       					<input type="text" class="form-control" style="width: 300px"
-      					 placeholder="* 用户名由6-18位字符组成" id="username" name="username" onchange="check_username()">
+      					 placeholder="* 用户名由2-8位字符组成" id="username" name="username" onchange="check_username()">
       					 <td id="check_username"></td>
     				</div>    				
 				</div>			
@@ -147,7 +147,7 @@ function check_all() {
 					<label class="col-sm-2 control-label">登录密码</label>
 					<div class="col-sm-10">
 						<input type="text" class="form-control" style="width: 300px"
-						placeholder="* 6-18位，必须包含字母和数字" id="password" name="password" onchange="check_password()">
+						placeholder="* 2-15位，必须包含字母或数字" id="password" name="password" onchange="check_password()">
 					<td id="check_password"></td>
 					</div>
 				</div>

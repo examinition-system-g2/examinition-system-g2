@@ -23,27 +23,39 @@
 %>
 
 <div class="container">
-		<div class="alert alert-warning">
-			<strong style="margin-left: 20px; font-size: 20px"><% if(examname!=null) out.print("考试"+examname+" 正在进行中"); else out.print("当前没有进行中的考试，不能登陆");%></strong>
+		<div id="myAlert" class="alert alert-warning alert-dismissable" style="margin-top: -75px;width: ;">
+			<button type="button" href="#" class="close" data-dismiss="alert">&times;</button>
+			<strong style="margin-left: 20px; font-size: 20px">
+				<% if(examname!=null) out.print("考试"+examname+" 正在进行中"); 
+					else out.print("当前没有进行中的考试，不能登陆");%>
+			</strong>
 		</div>
-		<div class="exam-login row vertical-center" style="margin-top: 190px">
+		<div class="exam-login row vertical-center" style="margin-top: 200px;">
 			<h1><span class="glyphicon glyphicon-thumbs-up"></span></h1>
-			<h2 class="text-center">
+			<h2 class="text-center" style="margin-top: 6px">
 				<!-- <img src="../image/exam-student.png" /> --> 学生登录
 			</h2>
 			<form class="bs-example bs-example-form" role="form" action="../StudentLogin">
 				<div class="input-group input-group-lg" style="margin: 20px">
-				<span class="input-group-addon">@</span>
+					<span class="input-group-addon">
+						<svg class="icon" aria-hidden="true" style="">
+  							<use xlink:href="#icon--happy-1"></use>
+						</svg>
+					</span>									
 					<input type="text" class="form-control" name="stu_id"
 						placeholder="schoolID">
 				</div>
 				<div class="input-group input-group-lg" style="margin: 20px">
-				<span class="input-group-addon">@</span>
+				<span class="input-group-addon">
+					<svg class="icon" aria-hidden="true" style="fill: #008000;">
+  							<use xlink:href="#icon-user-boy"></use>
+					</svg>
+				</span>
 					<input type="text" class="form-control" name="stu_username"
 						placeholder="username">
 				</div>
 				<div class="form-group" style="margin: 20px">
-					<button type="submit" class="btn btn-primary btn-lg btn-block"style="disabled=<%if(examname==null) out.print("disabled");%>">登录</button>
+					<button type="submit" class="btn btn-primary btn-lg btn-block"style="disabled=<%if(examname==null) out.print("disabled");%>">Sign In</button>
 				</div>
 			</form>
 		</div>

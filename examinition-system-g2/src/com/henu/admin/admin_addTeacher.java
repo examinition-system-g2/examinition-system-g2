@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * @author tz
+ * @author 
  * Servlet implementation class admin_addTeacher
  */
 @WebServlet("/admin_addTeacher")

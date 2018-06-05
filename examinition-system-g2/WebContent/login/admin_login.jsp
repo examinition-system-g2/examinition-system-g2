@@ -10,17 +10,25 @@
 	<div class="container">
 		<div class="exam-login  row vertical-center" style="margin-top: 200px">
 			<h1><span class="glyphicon glyphicon-hand-right"></span></h1>
-			<h2 class="text-center">				
+			<h2 class="text-center" style="margin-top: 6px">				
 				<!-- <img src="../image/exam-admin.png" /> --> 管理员登录
 			</h2>
 			<form class="bs-example bs-example-form" role="form" action="../AdminLogin" method="post">
 				<div class="input-group input-group-lg" style="margin: 20px">
-				<span class="input-group-addon">@</span>
+					<span class="input-group-addon">
+						<svg class="icon" aria-hidden="true" style="">
+  							<use xlink:href="#icon--happy-"></use>
+						</svg>
+					</span>
 					<input type="text" class="form-control" name="ad_id"
 						placeholder="username">
 				</div>
 				<div class="input-group input-group-lg" style="margin: 20px">
-				<span class="input-group-addon">@</span>
+					<span class="input-group-addon">
+						<svg class="icon" aria-hidden="true" style="fill: #008000;">
+  							<use xlink:href="#icon-unie604"></use>
+						</svg>
+					</span>
 					<input type="password" class="form-control" name="ad_username"
 						placeholder="password">
 				</div>

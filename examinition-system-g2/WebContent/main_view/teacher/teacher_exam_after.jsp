@@ -50,12 +50,12 @@
 			} else {
 				if (!exam.getE_isend())
 					sb.append("<a href='../../teacher_stopexam?examname=" + exam.getE_name()
-							+ "&id=1' title='停止考试' class='btn btn-info'>停止考试</a>");
+							+ "&id=1' title='停止考试' class='btn btn-primary'>停止考试</a>");
 				else if (!exam.getE_clear()) {
 					sb.append("<a href='../../teacher_downloadexam?examname=" + exam.getE_name()
-							+ "&id=1' title='下载考生答案' class='btn btn-info'>下载</a>");
+							+ "&id=1' title='下载考生答案' class='btn btn-primary'>下载</a>");
 					sb.append("&nbsp;&nbsp;<a href='../../teacher_clearexam?examname=" + exam.getE_name()
-							+ "&id=1' title='清理考试' class='clear_btn btn btn-info'>清理考试</a>");
+							+ "&id=1' title='清理考试' class='clear_btn btn btn-primary'>清理考试</a>");
 				} else
 					sb.append("");
 			}

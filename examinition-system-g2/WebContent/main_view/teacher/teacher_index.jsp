@@ -12,6 +12,33 @@
 	src="../../js/jquery.min.js"></script>
 <script
 	src="../../js/bootstrap.min.js"></script>
+<script src="../../iconfont/iconfont.js"></script>
+<style type="text/css">
+.icon {
+   width: 1.4em; height: 1.4em;
+   vertical-align: -0.15em;
+   fill: currentColor;
+   overflow: hidden;
+}
+.navbar{
+    margin-bottom: 0px;
+    /* border-radius: 5px; */
+    background: ;
+        
+} 
+.navbar ul li a{
+    color:#004000;
+}
+/* .navbar-nav ul li a:hover{
+    color: aqua;
+    background-color: #282828;        
+} */
+.nav>li>a:hover, .nav>li>a:focus {
+	border-radius: 15px;
+	text-decoration: none;
+	background-color: #dfdfdf;
+}   
+</style>
 </head>
 <body>
 	<%
@@ -27,11 +54,12 @@
 				flag=1;
 		}
 	%>
-	<nav class="navbar navbar-default navbar-fixed-top">
+	<nav class="navbar bg-warning navbar-fixed-top">
 	<div class="navbar-collapse collapse">
-		<div class="container">
+		<div class="container-fluid">
 			<ul class="nav navbar-nav">
-				<li style="font-size: 18px; text-color: #ffffff;"><a>上机考试系统</a></li>
+				<li style="font-size: 25px;margin-right:20px; vertical-align: middle; text-color: #004000; text-shadow: #bcbc78 3px 3px 3px;">
+				<em>On Board Exam</em></li>
 				<li><a href="teacher_about.jsp"><span
 						class="glyphicon glyphicon-home"></span>首页</a></li>
 				<li><a href="teacher_exam_before.jsp"><span

@@ -85,8 +85,8 @@
 	%>
 	<div class="container">
 		<div class="alert navbar-inverse"
-			style="background-color: #eeeeee; margin-top: 20px">
-			<strong style="margin-left: 20px; font-size: 18px">添加考试</strong>
+			style="background-color: #eeeeee; margin-top: 10px">
+			<strong style="margin-left: 10px; font-size: 18px">添加考试</strong>
 			<form class="form-inline" role="form" action="../../teacher_addexam"
 				style="margin-left: 20px; margin-top: 5px;">
 				<div class="form-group">
@@ -110,7 +110,7 @@
 						name="exam_autostart">自动开始
 					</label>
 				</div>
-				<button class="btn btn-info" type="submit">添加</button>
+				<button class="btn btn-primary" type="submit">添加</button>
 			</form>
 		</div>
 		<table class="table table-bordered" style="margin-top: 10px">

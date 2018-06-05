@@ -12,6 +12,33 @@
 	src="../../js/jquery.min.js"></script>
 <script
 	src="../../js/bootstrap.min.js"></script>
+<script src="../../iconfont/iconfont.js"></script>
+<style type="text/css">
+.icon {
+   width: 1.4em; height: 1.4em;
+   vertical-align: -0.15em;
+   fill: currentColor;
+   overflow: hidden;
+}
+.navbar{
+    margin-bottom: 0px;
+    /* border-radius: 5px; */
+    background: ;
+        
+} 
+.navbar ul li a{
+    color:#004000;
+}
+/* .navbar-nav ul li a:hover{
+    color: aqua;
+    background-color: #282828;        
+} */
+.nav>li>a:hover, .nav>li>a:focus {
+	border-radius: 15px;
+	text-decoration: none;
+	background-color: #dfdfdf;
+}   
+</style>
 </head>
 <body>
 	<%
@@ -32,19 +59,20 @@
 			hidding = true;
 		}
 	%>
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<nav class="navbar bg-warning navbar-fixed-top" role="navigation">
 	<div class="navbar-collapse collapse">
 		<div class="container-fluid">
 			<ul class="nav navbar-nav">
-				<li style="font-size: 18px; text-color: #ffffff;"><a>上机考试系统</a></li>
+				<li style="font-size: 25px;margin-right:20px; vertical-align: middle; text-color: #004000; text-shadow: #bcbc78 3px 3px 3px;">
+				<em>On Board Exam</em></li>
 				<li><a href="admin_about.jsp"><span
 						class="glyphicon glyphicon-home"></span>首页</a></li>
 				<li class="dropdown">
 					<a href="admin_manageteacher.jsp" class="dropdown-toggle" data-toggle="dropdown"><span
 						class="glyphicon glyphicon-user"></span>教师管理<b class="caret"></b></a>
-					<ul class="dropdown-menu">
-					<li><a href="admin_addTeacher.jsp">添加教师</a></li>
-					<li><a href="admin_manageteacher.jsp">查询教师</a></li>
+					<ul class="dropdown-menu" style="width:;">
+					<li><a style="" href="admin_addTeacher.jsp">添加教师</a></li>
+					<li><a style="color:;" href="admin_manageteacher.jsp">查询教师</a></li>
 					</ul>
 				</li>
 				<li><a href="admin_clearexam.jsp"><span
@@ -67,11 +95,12 @@
 			<!-- <img src="../../image/exam-admin.png" />欢迎管理员登录 -->
 		</h1>
 	</div>
-	<div class="container alert navbar-inverse"
+	<div class="container alert alert-warning alert-dismissable"
 		<%if (!hidding) {
 				out.print("style=\"display:none\"");
-			}%>>
-		<strong style="color: white; margin-left: 20px; font-size: 15px">没有设置管理员账号，默认管理员账号存在风险，请尽快处理！</strong>
+			}%>  style="margin-left: 110px;">
+		<button type="button" href="#" class="close" data-dismiss="alert">&times;</button>
+		<strong style="margin-left: 20px; font-size: 20px">没有设置管理员账号，默认管理员账号存在风险，请尽快处理！</strong>
 	</div>
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
 		aria-labelledby="myModalLabel" aria-hidden="true">

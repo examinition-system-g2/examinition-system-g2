@@ -20,7 +20,7 @@
 <jsp:include page="teacher_index.jsp"></jsp:include>
 	<div class="container">
 		<div class="alert navbar-inverse"
-			style="background-color: #eeeeee; margin-top: 20px">
+			style="background-color: #eeeeee; margin-top: 10px">
 			<strong style="margin-left: 20px; font-size: 18px">按学生查找已登录信息</strong>
 			<form class="form-inline" role="form" action="../../teacher_unlocked"
 				style="margin-left: 20px; margin-top: 5px;">

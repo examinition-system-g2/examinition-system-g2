@@ -12,9 +12,16 @@
 	src="../js/jquery.min.js"></script>
 <script
 	src="../js/bootstrap.min.js"></script>
+<script src="../iconfont/iconfont.js"></script>
 <style type="text/css">
 body {
 	padding-top: 40px;
+}
+.icon {
+   width: 1.4em; height: 1.4em;
+   vertical-align: -0.15em;
+   fill: currentColor;
+   overflow: hidden;
 }
 </style>
 

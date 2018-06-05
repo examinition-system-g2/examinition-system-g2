@@ -51,7 +51,7 @@
 			} else {
 				if (!exam.getE_isend())
 					sb.append("<a href='../../teacher_stopexam?examname=" + exam.getE_name()
-							+ "&id=2' title='停止考试' class='btn btn-info'>停止考试</a>");
+							+ "&id=2' title='停止考试' class='btn btn-primary'>停止考试</a>");
 				else if (!exam.getE_clear()) {
 					sb.append("<a href='../../teacher_downloadexam?examname=" + exam.getE_name()
 							+ "&id=2' title='下载考生答案' class='btn btn-info'>下载</a>");

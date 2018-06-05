@@ -55,7 +55,7 @@
 	<div class="container">
 		<div class="col-md-12" style="padding-left: 5px; padding-right: 5px;">
 			<div class="alert navbar-inverse "
-				style="background-color: #eeeeee; height: 200px; margin-top: 20px;">
+				style="background-color: #eeeeee; height: 200px; margin-top:10px;">
 				<strong style="margin-left: 20px; font-size: 18px">编辑考试信息</strong>
 				<form class="form-inline" role="form" action="teacher_addexam.jsp"
 					style="margin-left: 20px; margin-top: 5px;">
@@ -68,7 +68,7 @@
 							placeholder="考试时间*" name="exam_starttime"
 							value="<%=exam_starttime%>"> <span
 							class="input-group-btn">
-							<button style="height: 35px" class="btn btn-default"
+							<button style="height: 35px" class="btn btn-defau;t"
 								type="button">
 								<span class="glyphicon glyphicon-remove"></span>
 							</button>
@@ -87,17 +87,17 @@
 						</label>
 					</div>
 					<br />
-					<button type="submit" style="margin-top: 8px" class="btn btn-info">修改</button>
+					<button type="submit" style="margin-top: 8px" class="btn btn-primary">修改</button>
 				</form>
 			</div>
 			<div class="col-md-12" style="padding-left: 5px; padding-right: 5px;">
 				<div class="alert navbar-inverse "
-					style="background-color: #eeeeee; margin-top: 20px;">
+					style="background-color: #eeeeee;">
 					<strong style="margin-left: 20px; font-size: 18px">上传试卷</strong>
 					<div class="navbar navbar-inverse"
 						style="line-height: 50px;padding-left: 25px;color: white;margin-top: 8px;display: <%if (upload.equals("null"))
 				out.print("none");%>">
-						已经上传过试卷，再次上传后原试卷将不可访问<a class="btn btn-default"
+						已经上传过试卷，再次上传后原试卷将不可访问<a class="btn btn-primary"
 							href="../../exam_download" style="margin-left: 10px"><span
 							class="glyphicon glyphicon-eye-open"></span>下载查看</a>
 					</div>
@@ -106,24 +106,24 @@
 						style="margin-left: 20px; margin-top: 8px;">
 						<input type="file" id="file" name="file" />
 						<button type="submit" onclick="return checkupload()"
-							style="margin-top: 5px" class="btn btn-info">上传</button>
+							style="margin-top: 5px" class="btn btn-primary">上传</button>
 					</form>
 				</div>
 			</div>
 			<div class="col-md-12" style="padding-left: 5px; padding-right: 5px;">
 				<div class="alert navbar-inverse "
-					style="background-color: #eeeeee; height: 140px; margin-top: 20px;">
+					style="background-color: #eeeeee; height: 140px; margin-top: ;">
 					<strong style="margin-left: 20px; font-size: 18px">导入学生名单</strong>
 					<form class="form-inline" role="form"
 						style="margin-left: 20px; margin-top: 12px;">
 						<label style="font-size: 12px">目前设定参加此次考试的学生人数：</label> <span><%=count%></span>
-						<br /> <a href="../../FenYe?exam=<%=examname %>" class="btn btn-info">继续导入</a>
+						<br /> <a href="../../FenYe?exam=<%=examname %>" class="btn btn-primary">继续导入</a>
 					</form>
 				</div>
 			</div>
 			<div class="col-md-12" style="padding-left: 5px; padding-right: 5px;">
 				<div class="alert navbar-inverse "
-					style="background-color: #eeeeee; height: 140px; margin-top: 20px;">
+					style="background-color: #eeeeee; height: 140px; margin-top: ;">
 					<strong style="margin-left: 20px; font-size: 18px">开启考试</strong>
 					<form class="form-inline" role="form" action="../../exam_Start"
 						style="margin-left: 20px; margin-top: 12px;">

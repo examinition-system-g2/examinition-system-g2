@@ -10,22 +10,30 @@
 <div class="container">
 		<div class="exam-login row vertical-center" style="margin-top: 200px">
 			<h1><span class="glyphicon glyphicon-hand-up"></span></h1>
-			<h2 class="text-center">
+			<h2 class="text-center" style="margin-top: 3px">
 				<!-- <img src="../image/exam-teacher.png" /> --> 教师登录
 			</h2>
 			<form class="bs-example bs-example-form" role="form" action="../TeacherLogin">
 				<div class="input-group input-group-lg" style="margin: 20px">
-				<span class="input-group-addon">@</span>
+					<span class="input-group-addon">
+						<svg class="icon" aria-hidden="true" style="">
+  							<use xlink:href="#icon--happy"></use>
+						</svg>
+					</span>
 					<input type="text" class="form-control" name="t_id"
 						placeholder="username">
 				</div>
 				<div class="input-group input-group-lg" style="margin: 20px">
-				<span class="input-group-addon">@</span>
+					<span class="input-group-addon">
+						<svg class="icon" aria-hidden="true" style="fill: #008000;">
+  							<use xlink:href="#icon-unie604"></use>
+						</svg>
+					</span>
 					<input type="password" class="form-control" name="t_username"
 						placeholder="password">
 				</div>
 				<div class="form-group" style="margin: 20px">
-					<button type="submit" class="btn btn-primary btn-lg btn-block">登录</button>
+					<button type="submit" class="btn btn-primary btn-lg btn-block">Sign In</button>
 				</div>
 			</form>
 		</div>

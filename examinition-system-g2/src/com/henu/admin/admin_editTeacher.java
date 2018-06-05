@@ -3,6 +3,10 @@ package com.henu.admin;
 import java.io.IOException;
 import java.sql.*;
 
+import java.security.Key;
+import java.security.Security;
+import javax.crypto.Cipher;
+
 import com.henu.bean.Teacher;
 import com.henu.utils.DaoFactory;
 import com.henu.utils.DbUtil;
@@ -12,8 +16,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 /**
- * @author tz
+ * @author 
  * Servlet implementation class admin_editTeacher
  */
 @WebServlet("/admin_editTeacher")

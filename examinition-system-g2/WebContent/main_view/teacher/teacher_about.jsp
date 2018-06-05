@@ -13,74 +13,84 @@
 <body>
 	<jsp:include page="teacher_index.jsp"></jsp:include>
 	<div class="container">
-		<div class="row">
-			<div class="col-md-4" style="padding-left: 5px; padding-right: 5px;">
-				<div class="alert navbar-inverse "
-					style="background-color: #eeeeee; height: 350px; margin-top: 20px;">
-					<strong style="margin-left: 20px; font-size: 18px">考前操作</strong>
-					<p>
-						<span class="glyphicon glyphicon-record"></span>
-						可以新建考试：指定考试名称、开始时间等
-					</p>
-					<p>
-						<span class="glyphicon glyphicon-record"></span>
-						可以编辑自己创建的、未创建的的考试，除了修改考试信息，还可以：
-
-					</p>
-					<p>
-						&nbsp&nbsp&nbsp&nbsp<span class="glyphicon glyphicon-flag"></span>
-						上传试卷
-					</p>
-					<p>
-						&nbsp&nbsp&nbsp&nbsp<span class="glyphicon glyphicon-flag"></span>
-						学生名单导入
-					</p>
-					<p>
-						&nbsp&nbsp&nbsp&nbsp<span class="glyphicon glyphicon-flag"></span>
-						开始考试
-					</p>
-				</div>
-			</div>
-			<div class="col-md-4" style="padding-left: 5px; padding-right: 5px;">
-				<div class="alert navbar-inverse "
-					style="background-color: #eeeeee; height: 350px; margin-top: 20px">
-					<strong style="margin-left: 20px; font-size: 18px">考中管理</strong>
-					<p>
-						<span class="glyphicon glyphicon-record"></span> 可以查看考试情况
-					</p>
-					<p>
-						<span class="glyphicon glyphicon-record"></span>
-						可以管理学生信息，手工添加个别学生信息
-					</p>
-					<p>
-						<span class="glyphicon glyphicon-record"></span> 可以解除学生登陆锁定
-					</p>
-					<p>
-						<span class="glyphicon glyphicon-record"></span> 可以添加或删除通知信息
-					</p>
-					<p></p>
-				</div>
-			</div>
-			<div class="col-md-4" style="padding-left: 5px; padding-right: 5px;">
-				<div class="alert navbar-inverse"
-					style="background-color: #eeeeee; height: 350px; margin-top: 20px;">
-					<strong style="margin-left: 20px; font-size: 18px">考后操作</strong>
-					<p>
-						<span class="glyphicon glyphicon-record"></span> 主考教师（考试创建者）可以结束考试
-					</p>
-					<p>
-						<span class="glyphicon glyphicon-record"></span> 主考教师可以打包下载学生的提交文件
-					</p>
-					<p>
-						<span class="glyphicon glyphicon-record"></span> 主考教师可以到处提交信息
-					</p>
-					<p>
-						<span class="glyphicon glyphicon-record"></span>
-						如果管理员设置，只考教师可以清理和删除考试
-					</p>
-				</div>
-			</div>
+	<div class="panel panel-success" style="margin-top:10px;margin-left:8px;">
+    	<div class="panel-heading" style="background-color: #eeeeee; margin-top:;">
+        	<!-- <h1 class="panel-title"></h1> -->
+        	<strong style="margin-left: 15px; font-size: 20px;">考前操作</strong>
+    	</div>
+    	<div class="panel-body text-left" style="margin-left: 20px; font-size: 18px;">
+        	<p style="">
+				<span class="glyphicon glyphicon-tag" style="margin-right: 10px;"></span>
+				可以新建考试：指定考试名称、开始时间等
+			</p>
+			<p>
+				<span class="glyphicon glyphicon-tag" style="margin-right: 10px;"></span> 
+				可以编辑自己创建的、未创建的的考试，除了修改考试信息，还可以:
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-map-marker" style="margin-right: 10px;"></span>
+				<em>上传试卷</em>
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-map-marker" style="margin-right: 10px;"></span>
+				<em>学生名单导入</em>
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-map-marker" style="margin-right: 10px;"></span>
+				<em>开始考试</em>
+			</p>
 		</div>
+	
+	<div class="panel panel-success">		
+		<div class="panel-heading" style="background-color: #eeeeee;">
+        	<!-- <h1 class="panel-title"></h1> -->
+        	<strong style="margin-left: 15px; font-size: 20px">考中管理</strong>
+    	</div>
+    	<div class="panel-body text-left" style="margin-left: 20px; font-size: 18px;">
+        	<p style="">
+				<span class="glyphicon glyphicon-tag" style="margin-right: 10px;"></span>
+				可以查看考试情况
+			</p>
+			<p>
+				<span class="glyphicon glyphicon-tag" style="margin-right: 10px;"></span>
+				可以管理学生信息，手动添加个别学生信息
+			</p>
+			<p>
+				<span class="glyphicon glyphicon-tag" style="margin-right: 10px;"></span>
+				 可以解除学生登陆锁定
+			</p>
+			<p>
+				<span class="glyphicon glyphicon-tag" style="margin-right: 10px;"></span>
+				可以添加或删除通知信息
+			</p>
+		</div>
+	
+	<div class="panel panel-success">		
+		<div class="panel-heading" style="background-color: #eeeeee;">
+        	<!-- <h1 class="panel-title"></h1> -->
+        	<strong style="margin-left: 15px; font-size: 20px">考后操作</strong>
+    	</div>
+    	<div class="panel-body text-left" style="margin-left: 20px; font-size: 18px;">
+        	<p style="">
+				<span class="glyphicon glyphicon-tag" style="margin-right: 10px;"></span>
+				主考教师（考试创建者）可以结束考试
+			</p>
+			<p>
+				<span class="glyphicon glyphicon-tag" style="margin-right: 10px;"></span>
+				主考教师可以打包下载学生的提交文件
+			</p>
+			<p style="">
+				<span class="glyphicon glyphicon-tag" style="margin-right: 10px;"></span>
+				主考教师可以到处提交信息
+			</p>
+			<p>
+				<span class="glyphicon glyphicon-tag" style="margin-right: 10px;"></span>
+				如果管理员设置，只考教师可以清理和删除考试
+			</p>
+    	</div>
+	</div>
+	</div>
+	</div>
 	</div>
 </body>
 </html>

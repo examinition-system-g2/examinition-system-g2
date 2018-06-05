@@ -21,6 +21,7 @@ tr {
 		String username=request.getParameter("edit_username");
 		String name=request.getParameter("edit_name");
 		String password=request.getParameter("edit_password");
+	
 		
 	%>
 
