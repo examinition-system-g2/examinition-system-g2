@@ -170,7 +170,7 @@ function check_all() {
 				
 			</form>
 		</div> -->
-		<a href="../../admin_searcherTeacher"></a>
+		<a href="../../FenYe_Teacher"></a>
 		<table class="table table-bordered" style="margin-top: 10px">
 			<tr>
 				<th class="col-md-3">用户名</th>
