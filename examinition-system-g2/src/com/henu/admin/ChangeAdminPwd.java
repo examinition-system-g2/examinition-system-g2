@@ -20,7 +20,7 @@ import com.henu.utils.DaoFactory;
 import com.henu.utils.DbUtil;
 
 /**
- * @author tz
+ * @author 
  * Servlet implementation class ChangeAdminPwd
  */
 @WebServlet("/ChangeAdminPwd")
@@ -81,7 +81,7 @@ public class ChangeAdminPwd extends HttpServlet {
 				response.sendRedirect("main_view/admin/admin_about.jsp");
 		} else {
 			
-			session.setAttribute("error", "<script>alert('输入原密码错误或修改后两次密码');</script>");
+			session.setAttribute("error", "<script>alert('输入原密码错误或修改后两次密码不相同');</script>");
 			response.sendRedirect("main_view/admin/admin_about.jsp");
 		}
 	}
