@@ -15,7 +15,8 @@ import jxl.read.biff.BiffException;
 public class GetDataFromExcel {
 	public static List<Student> getAllByExcel(String path) throws IOException{
 		File filePath;
-		
+		filePath = new File(path);
+/*		
 		try {
 			filePath = new File(path);
 			Workbook wb1 = Workbook.getWorkbook(filePath);
@@ -23,6 +24,7 @@ public class GetDataFromExcel {
 			filePath = new File("C:\\Test.xls");
 			
 		}
+*/
 		List<Student> list = new ArrayList<Student>();
 		try {
 			Workbook wb = Workbook.getWorkbook(filePath);
