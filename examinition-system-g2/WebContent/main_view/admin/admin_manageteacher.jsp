@@ -102,39 +102,9 @@ function check_all() {
 
 
 </script> -->
+
 </head>
 <body>
-	<%	String error=(String)session.getAttribute("pwderror");
-	out.print(error);
-	session.setAttribute("pwderror", "");
-	%>
-	<%
-		request.setCharacterEncoding("utf-8");
-		//查询所有教师信息
-	
-		List<Teacher> list=DaoFactory.getTeacherDaoInstance().search();
-		StringBuffer sb = new StringBuffer();
-		for(Teacher teacher:list)
-		{
-			sb.append("<tr><td>");
-			sb.append(teacher.getT_username());
-			sb.append("</td><td>");
-			sb.append(teacher.getT_name());
-			sb.append("</td><td>");
-			if(teacher.getT_manager()){
-				sb.append("<span class=\"glyphicon glyphicon-ok\"></span>");
-			}else{
-				sb.append("");
-			}
-			sb.append("</td><td>");
-			//此处缺少href跳转
-			sb.append("<a href='admin_editTeacher.jsp?edit_username="+teacher.getT_username()+"&edit_name="+teacher.getT_name()+"&edit_password="+teacher.getT_pwd()+"'><span class='glyphicon glyphicon-edit' title='编辑'></span></a>");
-			sb.append("&nbsp&nbsp&nbsp");
-			sb.append("<a href='../../admin_deleteTeacher?delete_username="+teacher.getT_username()+"'><span class='glyphicon glyphicon-trash' title='删除'></span></a>");
-			sb.append("</td></tr>");
-		}
-	
-	%>
 	<jsp:include page="admin_head.jsp"></jsp:include>
 	<div class="container">
 		<!-- <div class="alert navbar-inverse"
@@ -200,6 +170,7 @@ function check_all() {
 				
 			</form>
 		</div> -->
+		<a href="../../admin_searcherTeacher"></a>
 		<table class="table table-bordered" style="margin-top: 10px">
 			<tr>
 				<th class="col-md-3">用户名</th>
@@ -207,8 +178,17 @@ function check_all() {
 				<th class="col-md-3">是否为管理员</th>
 				<th class="col-md-3"></th>
 			</tr>
-			<%=sb.toString()%>
-		</table>
+			<%
+				StringBuilder sbinfo = (StringBuilder) session.getAttribute("info");
+				/* sb.append("examname"); */
+				out.print(sbinfo);
+			%>
+			</table>
+			<ul class="pagination pagination-lg">
+				<li><a href="../../FenYe_Teacher?page=<%=session.getAttribute("current1")%>">&laquo;</a></li>
+					<%=(String)session.getAttribute("bar") %>
+				<li><a href="../../FenYe_Teacher?page=<%=session.getAttribute("current2")%>">&raquo;</a></li>
+			</ul>
 	</div>
 </body>
 </html>
