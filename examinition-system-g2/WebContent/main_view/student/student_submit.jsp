@@ -5,7 +5,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>提交试卷</title>
+<title>Student Submit</title>
+<link rel="stylesheet"
+	href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script
+	src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 	function checkupload() {
 		var file = document.getElementById("file").value;
@@ -74,11 +80,12 @@
 				<%=sb.toString() %>
 			</table>
 		<h3>
-			<strong>答案上传</strong>
+			<strong>继续上传</strong>
 		</h3>
+		<span style="font-size: 18px">请按照考试要求将答案文件打包，再进行上传。同名文件多次上传将会覆盖。</span>
 		<form class="form-inline" role="form" name="file"  action="../../student_Upload" enctype="multipart/form-data" method="post"
 			style="margin-left: 20px; margin-top: 12px; font-size: 18px">
-			<input  class="btn btn-default" type="file" id="file" name="file" value="浏览..." />
+			<input type="file" id="file" name="file" value="浏览..." />
 			<button type="submit" onclick="return checkupload()" style="margin-top: 10px;" class="btn btn-info">上传</button>
 		</form>
 	</div>

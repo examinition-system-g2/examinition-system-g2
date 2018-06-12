@@ -8,8 +8,8 @@
 </head>
 <body>
 	<jsp:include page="teacher_index.jsp"></jsp:include>
-	<div class="container alert navbar-inverse">
-		<strong style="color: white; margin-left: 20px; font-size: 15px">完成学生名单的导入和修改后,</strong>
+	<div class="container alert alert-warning">
+		<strong style="color: white; margin-left: 20px; font-size: 15px;color:black;">完成学生名单的导入和修改后,</strong>
 		<a href="teacher_addexam.jsp" class="btn btn-default"><span
 			class="glyphicon glyphicon-pencil"></span>返回编辑</a>
 	</div>
@@ -21,12 +21,11 @@
 				style="margin-left: 20px; margin-top: 5px;"
 				action="../../TeacherAddStudent" method="post">
 				<div class="form-group">
-					<input type="text" class="form-control" style="width: 250px"
-						placeholder="学号*" name="xuehao"> <input type="text"
-						class="form-control" style="width: 250px" placeholder="姓名*"
-						name="xingming"> <input type="text" class="form-control"
-						style="width: 250px" placeholder="班级*" name="banji"> <input
-						type="submit" class="btn btn-info" value="添加" />
+					<input type="text" class="form-control" style="width: 250px"placeholder="学号*" name="xuehao"> 
+					<input type="text"
+						class="form-control" style="width: 250px" placeholder="姓名*"name="xingming"> 
+						<input type="text" class="form-control" style="width: 250px" placeholder="班级*" name="banji"> 
+						<input type="submit" class="btn btn-primary" value="添加" />
 				</div>
 			</form>
 		</div>
@@ -54,7 +53,7 @@
 				class="form-inline" role="form"  enctype="multipart/form-data"
 				style="margin-left: 20px; margin-top: 12px;">
 				<input type="file" name="file" />
-				<button type="submit" style="margin-top: 5px" class="btn btn-info">导入</button>
+				<button type="submit" style="margin-top: 5px" class="btn btn-primary">导入</button>
 			</form>
 		</div>
 	</div>
