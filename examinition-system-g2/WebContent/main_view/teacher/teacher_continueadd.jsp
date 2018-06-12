@@ -8,8 +8,8 @@
 </head>
 <body>
 	<jsp:include page="teacher_index.jsp"></jsp:include>
-	<div class="container alert alert-warning">
-		<strong style="color: white; margin-left: 20px; font-size: 15px;color:black;">完成学生名单的导入和修改后,</strong>
+	<div class="container alert btn-primary">
+		<strong style="color: white; margin-left: 20px; font-size: 15px;">完成学生名单的导入和修改后,&nbsp;&nbsp;</strong>
 		<a href="teacher_addexam.jsp" class="btn btn-default"><span
 			class="glyphicon glyphicon-pencil"></span>返回编辑</a>
 	</div>

@@ -87,7 +87,9 @@ public class FenYe extends HttpServlet {
 			Student student = list.get(i);
 			sb1.append("<tr><td>"+student.getStu_id()+"</td>");
 			sb1.append("<td>"+student.getStu_name()+"</td>");
-			sb1.append("<td>"+student.getStu_class()+"</td></tr>");
+			sb1.append("<td>"+student.getStu_class()+"</td>");
+			//在学生信息显示中添加该生属于哪场考试	--@yy
+			sb1.append("<td>"+student.getStu_exam()+"</td></tr>");
 		}
 		
 		session.setAttribute("info", sb1);
@@ -95,7 +97,7 @@ public class FenYe extends HttpServlet {
 		StringBuilder sb = new StringBuilder(); // 存放页数信息
 		
 		for (int i = 1; i <= pages; i++) {
-			// 构建分页当行条
+			// 构建分页导航条
 			if (i == currpage) {
 				sb.append("<li class='active page-item'><a  class='page-link' href='#'>" + i + "</a></li>");
 			} else {

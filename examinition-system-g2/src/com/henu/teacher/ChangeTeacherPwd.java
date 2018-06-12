@@ -22,20 +22,23 @@ public class ChangeTeacherPwd extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ChangeTeacherPwd() {
+    /*public ChangeTeacherPwd() {
         super();
         // TODO Auto-generated constructor stub
-    }
+    }*/
+	public ChangeTeacherPwd() {
+		super();
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		request.setCharacterEncoding("utf-8");
 		HttpSession session = request.getSession();
-		String id = (String) session.getAttribute("username");
-		System.out.println(session.getAttribute("username"));
+		String id = (String) session.getAttribute("teacher");
+		System.out.println(session.getAttribute("teacher"));
 		String oldPwd = request.getParameter("oldPwd");
 		String newPwd1 = request.getParameter("newPwd1");
 		String newPwd2 = request.getParameter("newPwd2");
@@ -63,7 +66,7 @@ public class ChangeTeacherPwd extends HttpServlet {
 				response.sendRedirect("main_view/teacher/teacher_about.jsp");
 		} else {
 			
-			session.setAttribute("teacher_error", "<script>alert('输入原密码错误或修改后两次密码');</script>");
+			session.setAttribute("teacher_error", "<script>alert('输入原密码错误或修改后两次密码不相同');</script>");
 			response.sendRedirect("main_view/teacher/teacher_about.jsp");
 		}
 	}
@@ -71,7 +74,7 @@ public class ChangeTeacherPwd extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
