@@ -91,8 +91,13 @@ public class exam_upload extends HttpServlet {
 					}
 					// 注意：不同的浏览器提交的文件名是不一样的，有些浏览器提交上来的文件名是带有路径的，如：
 					// c:\a\b\1.txt，而有些只是单纯的文件名，如：1.txt
-					// 处理获取到的上传文件的文件名的路径部分，只保留文件名部分
+					// 处理获取到的上传文件的文件名的路径部分，只保留文件名部分，并把文件名设为upload,后缀不变
 					filename = "upload"+filename.substring(filename.lastIndexOf("."));
+					
+					//处理获取到的上传文件的文件名的路径部分，只保留原文件名和后缀     --@yy
+					//filename = "upload"+filename.substring(filename.lastIndexOf("/"));
+						
+					
 					// 获取item中的上传文件的输入流
 					InputStream in = item.getInputStream();
 					// 创建一个文件输出流

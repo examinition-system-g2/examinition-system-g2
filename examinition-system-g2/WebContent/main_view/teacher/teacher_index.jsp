@@ -70,7 +70,7 @@
 					<ul class="dropdown-menu">
 						<li ><a href="teacher_exam_survey.jsp">考试概况</a></li>
 						<li><a href="../../FenYe">学生信息</a></li>
-						<li><a href="teacher_unlocked.jsp">解除锁定</a></li>
+						<li><a href="teacher_unlocked.jsp">解除绑定</a></li>
 						<li><a href="teacher_notice.jsp">通知管理</a></li>
 					</ul></li>
 				<li <%if(flag!=1) out.print("style='pointer-events:none;'");%>><a href="teacher_exam_after.jsp"><span

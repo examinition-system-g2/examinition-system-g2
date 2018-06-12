@@ -25,9 +25,10 @@ import com.henu.utils.DbUtil;
  * Servlet implementation class exam_download
  */
 @WebServlet("/exam_download")
-public class exam_download extends HttpServlet {
+public class exam_download extends HttpServlet{
+
 	private static final long serialVersionUID = 1L;
-       
+    
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -79,5 +80,4 @@ public class exam_download extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
-
 }

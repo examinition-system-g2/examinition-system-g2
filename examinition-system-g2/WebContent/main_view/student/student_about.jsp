@@ -75,7 +75,9 @@
 				<h3>
 					<strong>答案上传</strong>
 				</h3>
-				<span style="font-size: 18px">请按照考试要求将答案文件打包，再次进行上传。同名文件多次上传将会覆盖。</span>
+				<span style="font-size: 18px">请按照<a href=""><strong>考试要求</strong></a>
+				将答案文件打包，再进行上传。同名文件多次上传将会覆盖。</span>
+				
 				<form class="form-inline" name="file" role="form"
 					action="../../student_Upload" enctype="multipart/form-data"
 					method="post"
@@ -86,17 +88,11 @@
 				</form>
 			</div>
 		</div>
-
 		<div class="col-md-6">
 			<table id="show" class="table" style="color: red">
 
 			</table>
 		</div>
-
 	</div>
-
-
-
-
 </body>
 </html>

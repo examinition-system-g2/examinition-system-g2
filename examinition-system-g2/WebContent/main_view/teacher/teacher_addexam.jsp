@@ -14,6 +14,18 @@
 		else
 			return true;
 	}
+	
+	/* //获取上传文件的文件名（有些浏览器默认取到的value值是路径，这里要把路径删除）   --@yy
+	function checkFileName(path){
+		var test1 = path.lastIndexOf("/");
+		var test2 = path.lastIndexOf("\\");
+		var test = Math.max(test1,test2);
+		if(test < 0){
+			document.getElementById("file").value = path;
+		}else{
+			document.getElementById("test").value = path.substring(test + 1);//赋值文件名
+		}
+	} */
 </script>
 </head>
 <body>
@@ -90,22 +102,27 @@
 					<button type="submit" style="margin-top: 8px" class="btn btn-primary">修改</button>
 				</form>
 			</div>
+			
 			<div class="col-md-12" style="padding-left: 5px; padding-right: 5px;">
 				<div class="alert navbar-inverse "
 					style="background-color: #eeeeee;">
 					<strong style="margin-left: 20px; font-size: 18px">上传试卷</strong>
-					<div class="navbar navbar-inverse"
-						style="line-height: 50px;padding-left: 25px;color: white;margin-top: 8px;display: <%if (upload.equals("null"))
+					<div>
+						<strong class="alert alert-warning" style="line-height: 50px;padding-left: 25px;color: black;margin-top: 8px;font-size: 15px;display: <%if (upload.equals("null"))
 				out.print("none");%>">
 						已经上传过试卷，再次上传后原试卷将不可访问<a class="btn btn-primary"
-							href="../../exam_download" style="margin-left: 10px"><span
-							class="glyphicon glyphicon-eye-open"></span>下载查看</a>
+						href="../../exam_download" style="margin-left: 10px"><span
+						class="glyphicon glyphicon-eye-open"></span>下载查看</a>
+					</strong>
 					</div>
+					
+					
+					
 					<form class="form-inline" role="form" action="../../exam_upload"
 						enctype="multipart/form-data" method="post"
 						style="margin-left: 20px; margin-top: 8px;">
 						<input type="file" id="file" name="file" />
-						<button type="submit" onclick="return checkupload()"
+						<button type="submit" onclick="return checkupload()" href="../../exam_upload"
 							style="margin-top: 5px" class="btn btn-primary">上传</button>
 					</form>
 				</div>
@@ -127,7 +144,7 @@
 					<strong style="margin-left: 20px; font-size: 18px">开启考试</strong>
 					<form class="form-inline" role="form" action="../../exam_Start"
 						style="margin-left: 20px; margin-top: 12px;">
-						<span style="font-size: 12px; color: #f7AE3F">尚未上传试卷</span> <br />
+						<!-- <span style="font-size: 12px; color: #f7AE3F">尚未上传试卷</span> <br /> -->
 						<button type="submit" style="margin-top: 12px"
 							class="btn btn-warning">
 							<span class="glyphicon glyphicon-off"></span>开启
