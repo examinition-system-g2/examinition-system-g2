@@ -1,3 +1,5 @@
+<%@page import="com.henu.utils.DbUtil"%>
+<%@page import="java.sql.ResultSet"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -17,12 +19,29 @@
 		<div class="alert navbar-inverse"
 			style="background-color: #eeeeee;  margin-top: 20px;">
 			<strong style="margin-left: 20px; font-size: 18px">修改系统配置</strong>
-			<form>
+			<%
+				String time=null;
+				String pageSize=null;
+				String manualTime=null;
+				String minSize=null;
+				String maxSize=null;
+				String sql = "SELECT * FROM systemconf";
+				ResultSet rs = DbUtil.executeQuery(sql);
+				while(rs.next()){
+					time = rs.getString("time");
+					pageSize = rs.getString("pageSize");
+					manualTime = rs.getString("manualTime");
+					minSize = rs.getString("minSize");
+					maxSize = rs.getString("maxSize");
+				}
+				DbUtil.close();
+			%>
+			<form  action="../../ChangeSystem">
 				<table>
 					<tr>
 						<td align="right"><b>后台任务时间间隔<b></td>
-						<td style="padding-left: 20px"><input type="text" value=30
-							 class="form-control inputclass"></td>
+						<td style="padding-left: 20px"><input type="text" value=<%=time%>
+							 class="form-control inputclass" name="time"></td>
 					</tr>
 					<tr>
 						<td></td>
@@ -33,8 +52,8 @@
 					</tr>
 					<tr>
 						<td align="right">分页查询记录条数</td>
-						<td style="padding-left: 20px"><input type="text" value=30
-							 class="form-control inputclass"></td>
+						<td style="padding-left: 20px"><input type="text" value=<%=pageSize %>
+							 class="form-control inputclass" name="pageSize"></td>
 					</tr>
 
 					<tr>
@@ -46,8 +65,8 @@
 					</tr>
 					<tr>
 						<td align="right">手动开启考试时间阈值</td>
-						<td style="padding-left: 20px"><input type="text" value=15
-							 class="form-control inputclass"></td>
+						<td style="padding-left: 20px"><input type="text" value=<%=manualTime %>
+							 class="form-control inputclass" name="manualTime"></td>
 					</tr>
 					<tr>
 						<td></td>
@@ -58,8 +77,8 @@
 					</tr>
 					<tr>
 						<td align="right">上传文件字节数下限</td>
-						<td style="padding-left: 20px"><input type="text" value=512
-							 class="form-control inputclass"></td>
+						<td style="padding-left: 20px"><input type="text" value=<%=minSize %>
+							 class="form-control inputclass" name="minSize"></td>
 					</tr>
 					<tr>
 						<td></td>
@@ -71,8 +90,8 @@
 					<tr>
 						<td align="right">上传文件字节数上限</td>
 						<td style="padding-left: 20px"><input type="text"
-							value=131072 
-							class="form-control inputclass"></td>
+							value=<%=maxSize %>
+							class="form-control inputclass" name="maxSize"></td>
 					</tr>
 					<tr>
 						<td></td>

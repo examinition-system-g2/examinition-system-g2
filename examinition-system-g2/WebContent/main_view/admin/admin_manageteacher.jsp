@@ -184,6 +184,7 @@ function check_all() {
 				{
 					response.sendRedirect("../../FenYe_Teacher");
 				}
+				
 				/* sb.append("examname"); */
 				out.print(sbinfo);
 			%>

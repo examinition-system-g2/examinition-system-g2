@@ -1,6 +1,7 @@
 package com.henu.utils;
 
 import java.io.IOException;
+import java.sql.ResultSet;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -40,7 +41,22 @@ public class FenYe_Teacher extends HttpServlet {
 		{
 			count++;
 		}
-		int pageSize = 5; // 设置每页显示5条记录
+		
+		//查询每页显示记录数
+		String sql = "SELECT * FROM systemconf";
+		String confPageSize = null;
+		System.out.println(sql);
+		ResultSet rs;
+		try{
+			rs = DbUtil.executeQuery(sql);
+			while(rs.next()){
+				confPageSize = rs.getString("pageSize");
+			}
+			DbUtil.close();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		int pageSize = Integer.parseInt(confPageSize); // 设置每页显示5条记录
 		// 计算总页数
 		if (count % pageSize == 0) {
 			pages = count / pageSize; // 总页数
@@ -71,11 +87,15 @@ public class FenYe_Teacher extends HttpServlet {
 			sb1.append("<td>"+teacher.getT_name()+"</td>");
 			if(teacher.getT_manager() == true)
 			{
-				sb1.append("<td>" + "是" + "</td></tr>");
+				sb1.append("<td>" + "<span class=\"glyphicon glyphicon-ok\"></span>" + "</td><td>");
 			}
 			else {
-				sb1.append("<td>" + "否" + "</td></tr>");
+				sb1.append("<td>" + "" + "</td><td>");
 			}
+			sb1.append("<a href='admin_editTeacher.jsp?edit_username="+teacher.getT_username()+"&edit_name="+teacher.getT_name()+"&edit_password="+teacher.getT_pwd()+"'><span class='glyphicon glyphicon-edit' title='编辑'></span></a>");
+			sb1.append("&nbsp&nbsp&nbsp");
+			sb1.append("<a href='../../admin_deleteTeacher?delete_username="+teacher.getT_username()+"'><span class='glyphicon glyphicon-trash' title='删除'></span></a>");
+			sb1.append("</td></tr>");
 		}
 		
 		session.setAttribute("info", sb1);
