@@ -5,6 +5,29 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>通知消息</title>
+<link rel="stylesheet"
+	href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script
+	src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script
+	src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(function() {
+	setInterval("showInfo()", 1000);
+});
+
+function showInfo() {
+	$.ajax({
+		type : "post",
+		url : "../../ShowInformation",
+		success : function(text) {
+			$("#show").html(text);
+		}
+	});
+}
+</script>
 </head>
 <body>
 <jsp:include page="teacher_index.jsp"></jsp:include>
@@ -29,14 +52,12 @@
 
 			<form class="form-inline" role="form"
 				style="margin-left: 20px; margin-top: 5px;">
-				<table class="table table-bordered" style="margin-top: 10px">
+				<table id="show" class="table table-bordered" style="margin-top: 10px">
 					<tr>
 						<th class="col-md-12">通知内容</th>
 					</tr>
 				</table>
 			</form>
-
-
 		</div>
 
 	</div>
