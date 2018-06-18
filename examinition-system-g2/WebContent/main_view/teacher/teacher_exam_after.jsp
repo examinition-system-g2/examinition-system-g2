@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>考后操作</title>
 </head>
-<body>
+<body style="background-image:url(../../image/background/h6.jpg);background-size:cover;">
 	<%
 		StringBuffer sb = new StringBuffer();
 		//查询所有考试信息
@@ -47,6 +47,8 @@
 			sb.append("</td><td>");
 			if (!exam.getE_isstart() && !exam.getE_isend()) {
 				sb.append("<span>考试未开启</span>");
+				sb.append("&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../teacher_clearexam?examname=" + exam.getE_name()
+				+ "&id=1' title='清理考试' class='cancel_btn btn btn-primary'>取消</a>");
 			} else {
 				if (!exam.getE_isend())
 					sb.append("<a href='../../teacher_stopexam?examname=" + exam.getE_name()
@@ -64,7 +66,7 @@
 	%>
 	<jsp:include page="teacher_index.jsp"></jsp:include>
 	<div class="container">
-		<table class="table table-bordered" style="margin-top: 10px">
+		<table class="table table-bordered" style="margin-top: 10px;background-color:#eeeeee;">
 			<tr>
 				<th class="col-md-1">考试名称</th>
 				<th class="col-md-2">考试时间</th>
@@ -81,9 +83,18 @@
 	</div>
 	<script type="text/javascript">
 		$(".clear_btn").click(function() {
-			var a = confirm("确定清楚考试资料?");
+			var a = confirm("确定清除该场考试资料?");
 
 			if (a == true) {
+				return true;
+			} else {
+				return false;
+			}
+		});
+		$(".cancel_btn").click(function() {
+			var b = confirm("确定取消该场考试?");
+
+			if (b == true) {
 				return true;
 			} else {
 				return false;

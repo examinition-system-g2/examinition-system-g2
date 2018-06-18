@@ -5,6 +5,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="./css/bootstrap-datetimepicker.min.css" rel="stylesheet"
+	media="screen">
+<script type="text/javascript" src="./css/bootstrap-datetimepicker.js"
+	charset="UTF-8"></script>
 <title>添加考试</title>
 <script type="text/javascript">
 	function checkupload() {
@@ -14,6 +18,7 @@
 		else
 			return true;
 	}
+	
 	
 	/* //获取上传文件的文件名（有些浏览器默认取到的value值是路径，这里要把路径删除）   --@yy
 	function checkFileName(path){
@@ -28,7 +33,7 @@
 	} */
 </script>
 </head>
-<body>
+<body style="background-image:url(../../image/background/h6.jpg);background-size:cover;">
 	<%
 		String examname=null;
 		try{
@@ -69,17 +74,24 @@
 			<div class="alert navbar-inverse "
 				style="background-color: #eeeeee; height: 200px; margin-top:10px;">
 				<strong style="margin-left: 20px; font-size: 18px">编辑考试信息</strong>
-				<form class="form-inline" role="form" action="teacher_addexam.jsp"
+				<form class="form-inline" role="form" action="../../teacher_editexam"
 					style="margin-left: 20px; margin-top: 5px;">
 					<div class="form-group">
 						<input type="text" class="form-control" style="width: 250px"
 							value="<%=examname%>" placeholder="考试名称*" name="examname">
 					</div>
-					<div class="input-group">
+					<div class="form-group">
+					<div class="input-group date form_date" data-link-field="dtp_input2">
 						<input style="height: 35px" type="text" class="form-control"
 							placeholder="考试时间*" name="exam_starttime"
 							value="<%=exam_starttime%>"> <span
 							class="input-group-btn">
+							<!-- <span class="input-group-addon">
+								<i class="glyphicon glyphicon-remove "></i>
+							</span> 
+							<span class="input-group-addon"> 
+								<i class="glyphicon glyphicon-calendar"></i>
+							</span> -->
 							<button style="height: 35px" class="btn btn-defau;t"
 								type="button">
 								<span class="glyphicon glyphicon-remove"></span>
@@ -89,6 +101,7 @@
 								<span class="glyphicon glyphicon-calendar"></span>
 							</button>
 						</span>
+					</div>
 					</div>
 					<br />
 					<div class="checkbox" style="padding-top: 8px">
@@ -154,5 +167,20 @@
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript">
+		$('.form_date').datetimepicker({
+			format : 'yyyy-mm-dd hh:ii',
+			weekStart : 1,
+			todayBtn : 1,
+			autoclose : 1,
+			todayHighlight : 1,
+			startView : 2,
+			minView : 2,
+			forceParse : 0,
+			minView : 0,
+			minuteStep : 10
+		});
+	</script>
+	
 </body>
 </html>

@@ -6,37 +6,40 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>添加教师</title>
-<!-- <script type="text/javascript">
+<script type="text/javascript">
 //验证用户名是否规范
 function check_username(){	
 	//在每个函数中定义check变量是为了在表单提交后，能够逐个验证每个函数是否通过
     var check; 
-    var username = document.getElementById("username").value; 
-    if (username.length > 18 || username.length < 6) { 
-      alert("用户名输入不合法，请重新输入！");
-      //若输入错误，则在此处获取焦点，继续输入
-      document.getElementById("username").focus();
-      /* $("#username").val("")； */
-      check = false; 
+    var username = document.getElementById("username").value;
+    if (username.length == 0){
+    	alert("用户名不能为空，请重新输入！");
+    	check = false;
+    }else if (username.length > 15 || username.length < 2) { 
+    	alert("用户名输入不合法，请重新输入！");
+      	//若输入错误，则在此处获取焦点，继续输入
+      	document.getElementById("username").focus();
+      	/* $("#username").val("")； */
+      	check = false; 
      } else { 
-      document.getElementById("check_username").innerHTML = "* 用户名输入成功 √"; 
-      check = true; 
+      	document.getElementById("check_username").innerHTML = "* 用户名输入成功 √"; 
+      	check = true; 
      } 
-     return check; 
+     	return check; 
 }
 
 //验证真实姓名是否规范
 function check_name(){	
     var check; 
-    var reg = "^[a-zA-Z\u4e00-\u9fa5]+$";
+    var reg = "^[a-zA-Z\u4e00-\u9fa5]+$";	//真实姓名只允许有中英文组成
     var name = document.getElementById("name").value; 
     if (reg.test(name)==true) { 
-    	document.getElementById("check_password").innerHTML = "* 姓名输入成功 √"; 
+    	document.getElementById("check_name").innerHTML = "* 姓名输入成功 √"; 
         check = true;
         
       } else { 
     	alert("姓名不合法，请重新输入！");
-        document.getElementById("password").focus();
+        document.getElementById("name").focus();
         check = false; 
       } 
       return check;     
@@ -45,9 +48,9 @@ function check_name(){
 //利用正则表达式判断密码是否符合规范
 function check_password() { 
   var check; 
-  var reg = /[^A-Za-z0-9_]+/;
+  var reg = /[A-Za-z0-9]+/;
   var password = document.getElementById("password").value; 
-  if (password.length < 6 || password.length > 18) { 
+  if (password.length < 2 || password.length > 15) { 
     alert("密码长度不合法，请重新输入！");
     document.getElementById("password").focus();
     check = false; 
@@ -55,14 +58,14 @@ function check_password() {
     document.getElementById("check_password").innerHTML = "* 密码输入成功 √"; 
     check = true; 
   }else{
-	 alert("密码输入不合法，请重新输入！");
+	 alert("密码格式不符合要求，请重新输入！");
 	 document.getElementById("password").focus();
 	 check = false; 
   } 
   return check; 
 } 
 
-//验证密码是否一致
+/* //验证密码是否一致
 function check_confirm_password() { 
   var check; 
   var password = document.getElementById("password").value; 
@@ -89,18 +92,15 @@ function check_email(){
 		alert("邮箱地址输入不规范，请重新输入！");
 	    document.getElementById("email").focus();
 	    check = false; 
-}
+} */
 	
 function check_all() { 
     var check = check_username() && check_name() && check_password(); 
     return check;  
   } 
-
-
-
-</script> -->
+</script>
 </head>
-<body>
+<body style="background-image:url(../../image/background/h13.jpg);background-size:cover;">
 	<%	String error=(String)session.getAttribute("pwderror");
 	out.print(error);
 	session.setAttribute("pwderror", "");
@@ -115,7 +115,7 @@ function check_all() {
 				<label class="col-sm-2 control-label">用户名</label>
 					<div class="col-sm-10">
       					<input type="text" class="form-control" style="width: 300px"
-      					 placeholder="* 用户名由2-8位字符组成" id="username" name="username" onchange="check_username()">
+      					 placeholder="* 用户名由2-15位字符组成" id="username" name="username" onchange="check_username()">
       					 <td id="check_username"></td>
     				</div>    				
 				</div>			
@@ -165,7 +165,7 @@ function check_all() {
 						name="manager">管理员 
 					</label>					
 				</div>
-				<div><button type="submit" class="btn btn-info" style="margin-left:1S0px;">添加</button></div>
+				<div><button type="submit" class="btn btn-primary" style="margin-left:1S0px;">添加</button></div>
 				
 			</form>
 		</div>

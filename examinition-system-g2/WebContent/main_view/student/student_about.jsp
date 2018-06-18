@@ -36,7 +36,7 @@
 	}
 </script>
 </head>
-<body>
+<body style="background-image:url(../../image/background/p40.jpg);background-size:cover;">
 	<%
 		String stu_id = (String) session.getAttribute("stu_id");
 		String examname = "";
@@ -54,7 +54,7 @@
 	%>
 	<jsp:include page="student_head.jsp"></jsp:include>
 	<div class="container">
-		<div class="jumbotron">
+		<div >
 			<div>
 				<h3>
 					<strong>试卷下载</strong>
@@ -67,7 +67,7 @@
 				</div>
 				<!-- 显示a标签 -->
 				<a class="btn btn-primary btn-lg" role="button" href="../../exam_download"
-					style="margin-left: 10px;display: <%if (examname.equals(""))
+					style="margin-left: 60px;display: <%if (examname.equals(""))
 				out.print("none");%>"><span
 					class="glyphicon glyphicon-eye-open"></span>下载查看</a>
 			</div>
@@ -75,21 +75,22 @@
 				<h3>
 					<strong>答案上传</strong>
 				</h3>
-				<span style="font-size: 18px">请按照<a href=""><strong>考试要求</strong></a>
-				将答案文件打包，再进行上传。同名文件多次上传将会覆盖。</span>
+				<span style="margin-left: 60px;font-size: 18px">请按照<a href=""><strong>考试要求</strong></a>
+				将答案文件打包，再进行上传。同名文件多次上传将会覆盖。</span><br><br>
 				
 				<form class="form-inline" name="file" role="form"
 					action="../../student_Upload" enctype="multipart/form-data"
 					method="post"
-					style="margin-left: 20px; margin-top: 12px; font-size: 18px">
-					<input type="file" id="file" name="file">
+					style="margin-left: 60px; margin-top: 12px; font-size: 18px">
+					<input type="file" id="file" name="file" style="">
 					<button type="submit" onclick="return checkupload()"
-						style="margin-top: 10px;" class="btn btn-primary btn-lg">上传</button>
+						style="margin-top: 10px;" class="btn btn-primary btn-lg">文件上传</button>
 				</form>
 			</div>
 		</div>
-		<div class="col-md-6">
-			<table id="show" class="table" style="color: red">
+		<div class="col-md-9" style="margin-top:10px;">
+			<h3 style="margin-left:-10px;"><strong>通知消息</strong></h3>
+			<table id="show" class="table" style="color: black">
 
 			</table>
 		</div>

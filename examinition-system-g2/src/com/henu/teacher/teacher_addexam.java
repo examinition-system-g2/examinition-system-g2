@@ -47,11 +47,18 @@ public class teacher_addexam extends HttpServlet {
 		if (exam_autostart != null) {
 			autostart = true;
 		}
+		/*//判断当前输入的考试名是否已经存在
+		Exam exist_examname=DaoFactory.getExamDaoInstance().search(examname);
+		if(exist_examname != null) {
+			response.sendRedirect("main_view/teacher/teacher_exam_before.jsp");
+		}*/
+		
 		Exam exam=new Exam();
 		exam.setE_name(examname);
 		exam.setE_starttime(exam_starttime);
 		exam.setE_autostart(autostart);
 		exam.setE_teacher(teacher);
+		
 		int result=DaoFactory.getExamDaoInstance().add(exam);
 		// 如果执行成功跳转页面
 		if (result > 0) {

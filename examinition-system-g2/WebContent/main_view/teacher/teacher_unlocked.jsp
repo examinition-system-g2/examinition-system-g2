@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>解除绑定</title>
 </head>
-<body>
+<body style="background-image:url(../../image/background/h6.jpg);background-size:cover;">
 <%
 	StringBuffer sb=new StringBuffer();
 	try{
@@ -27,7 +27,7 @@
 				<div class="form-group">
 					<input type="text" class="form-control" style="width: 250px"
 					name="id"	placeholder="学号*">
-					<input type="submit" class="btn btn-info" value="查找" />
+					<input type="submit" class="btn btn-primary" value="查找" />
 				</div>
 			</form>
 		</div>

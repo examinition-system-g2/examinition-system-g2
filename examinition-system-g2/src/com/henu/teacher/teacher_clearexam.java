@@ -71,6 +71,8 @@ public class teacher_clearexam extends HttpServlet {
 		}
 			if(id.equals("1"))
 				response.sendRedirect("main_view/teacher/teacher_exam_after.jsp");
+			else if(id.equals("2"))
+				response.sendRedirect("main_view/teacher/teacher_exam_before.jsp");
 			else
 				response.sendRedirect("main_view/admin/admin_clearexam.jsp");
 	}
