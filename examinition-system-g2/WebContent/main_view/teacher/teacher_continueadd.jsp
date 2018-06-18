@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>添加学生</title>
 </head>
-<body>
+<body style="background-image:url(../../image/background/h6.jpg);background-size:cover;">
 	<jsp:include page="teacher_index.jsp"></jsp:include>
 	<div class="container alert btn-primary">
 		<strong style="color: white; margin-left: 20px; font-size: 15px;">完成学生名单的导入和修改后,&nbsp;&nbsp;</strong>

@@ -23,7 +23,7 @@
 </script>
 
 </head>
-<body>
+<body style="background-image:url(../../image/background/p40.jpg);background-size:cover;">
 	<%
 		String stu_id=(String)session.getAttribute("stu_id");
 		String file="";
@@ -82,11 +82,11 @@
 		<h3>
 			<strong>继续上传</strong>
 		</h3>
-		<span style="font-size: 18px">请按照考试要求将答案文件打包，再进行上传。同名文件多次上传将会覆盖。</span>
+		<span style="margin-left: 60px;font-size: 18px">请按照考试要求将答案文件打包，再进行上传。同名文件多次上传将会覆盖。</span><br><br>
 		<form class="form-inline" role="form" name="file"  action="../../student_Upload" enctype="multipart/form-data" method="post"
-			style="margin-left: 20px; margin-top: 12px; font-size: 18px">
+			style="margin-left: 60px; margin-top: 12px; font-size: 18px">
 			<input type="file" id="file" name="file" value="浏览..." />
-			<button type="submit" onclick="return checkupload()" style="margin-top: 10px;" class="btn btn-info">上传</button>
+			<button type="submit" onclick="return checkupload()" style="margin-top: 10px;" class="btn btn-primary">文件上传</button>
 		</form>
 	</div>
 </body>

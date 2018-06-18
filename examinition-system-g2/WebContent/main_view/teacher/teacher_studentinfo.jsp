@@ -7,12 +7,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>学生信息</title>
 </head>
-<body>
+<body style="background-image:url(../../image/background/h6.jpg);background-size:cover;">
 	<jsp:include page="teacher_index.jsp"></jsp:include>
 	<div class="container">
 		<div class="alert navbar-inverse"
 			style="background-color: #eeeeee; margin-top: 10px">
-			<strong style="margin-left: 20px; font-size: 18px">当前考试:<%=session.getAttribute("studentinfo") %></strong>
+			<strong style="margin-left: -7px; font-size: 18px">当前考试:<%=session.getAttribute("studentinfo") %></strong>
 			<strong style="margin-left: 20px; font-size: 18px">添加单个学生</strong>
 			<form class="form-inline" role="form"
 				style="margin-left: 20px; margin-top: 5px;"
@@ -23,11 +23,12 @@
 						class="form-control" style="width: 250px" placeholder="姓名*"
 						name="xingming"> <input type="text" class="form-control"
 						style="width: 250px" placeholder="班级*" name="banji"> <input
-						type="submit" class="btn btn-info" value="添加" />
+						type="submit" class="btn btn-primary" value="添加" />
 				</div>
 			</form>
 		</div>
-		<table class="table table-bordered" style="margin-top: 10px">
+		<strong style="margin-left: 7px; font-size: 18px">已添加学生</strong>
+		<table class="table table-bordered" style="margin-top: 10px;background-color:#eeeeee;">
 			<tr>
 				<th class="col-md-3">学号</th>
 				<th class="col-md-3">姓名</th>

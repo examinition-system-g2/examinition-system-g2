@@ -8,7 +8,7 @@
 <title>清理考试</title>
 </head>
 
-<body>
+<body style="background-image:url(../../image/background/h13.jpg);background-size:cover;"">
 	<%
 		StringBuffer sb = new StringBuffer();
 		//查询所有考试信息
@@ -48,15 +48,17 @@
 			sb.append("</td><td>");
 			if (!exam.getE_isstart() && !exam.getE_isend()) {
 				sb.append("<span>考试未开启</span>");
+				sb.append("&nbsp;&nbsp;&nbsp;&nbsp;<a href='../../teacher_clearexam?examname=" + exam.getE_name()
+				+ "&id=2' title='清理考试' class='cancel_btn btn btn-primary'>取消</a>");
 			} else {
 				if (!exam.getE_isend())
 					sb.append("<a href='../../teacher_stopexam?examname=" + exam.getE_name()
 							+ "&id=2' title='停止考试' class='btn btn-primary'>停止考试</a>");
 				else if (!exam.getE_clear()) {
 					sb.append("<a href='../../teacher_downloadexam?examname=" + exam.getE_name()
-							+ "&id=2' title='下载考生答案' class='btn btn-info'>下载</a>");
+							+ "&id=2' title='下载考生答案' class='btn btn-primary'>下载</a>");
 					sb.append("&nbsp;&nbsp;<a href='../../teacher_clearexam?examname=" + exam.getE_name()
-							+ "&id=2' title='清理考试' class='clear_btn btn btn-info'>清理考试</a>");
+							+ "&id=2' title='清理考试' class='clear_btn btn btn-primary'>清理考试</a>");
 				} else
 					sb.append("");
 			}
@@ -82,9 +84,18 @@
 	</div>
 	<script type="text/javascript">
 		$(".clear_btn").click(function() {
-			var a = confirm("确定删除?");
+			var a = confirm("确定清理该场考试资料?");
 
 			if (a == true) {
+				return true;
+			} else {
+				return false;
+			}
+		});
+		$(".cancel_btn").click(function() {
+			var b = confirm("确定取消该场考试?");
+
+			if (b == true) {
 				return true;
 			} else {
 				return false;

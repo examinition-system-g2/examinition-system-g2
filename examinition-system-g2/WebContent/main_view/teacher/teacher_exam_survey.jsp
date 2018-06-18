@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>考试情况</title>
 </head>
-<body>
+<body style="background-image:url(../../image/background/h6.jpg);background-size:cover;">
 <%
 	List<Exam> list=DaoFactory.getExamDaoInstance().search();
 	String  examname=null;
@@ -42,18 +42,18 @@
 <jsp:include page="teacher_index.jsp"></jsp:include>
 <div class="container">
 	<div class="col-md-12" style="padding-left: 5px; padding-right: 5px;display: <%if(examname==null) out.print("null");%>>">
-			<div class="alert navbar-inverse "
-				style="background-color: #eeeeee; height: 200px; margin-top: 10px;">
-				<strong style="margin-left: 20px; font-size: 18px">
+			<div class="alert  "
+				style="background-color: ; height: 200px; margin-top: -5px;">
+				<strong style="margin-left: 15px; font-size: 23px">
 				<span>考试 </span><%if(examname!=null) out.print(examname);%><!--  得到该场考试的信息-->
 				进行情况：</strong>
 		
-				<p style="margin-left:20px ;margin-top:12px;">参加考试的学生总数:<span><%=all_count %></span><!-- 得到参加的总人数 -->
+				<p style="margin-left:35px ;margin-top:12px;font-size: 17px;">参加考试的学生总数:<span><%=all_count %></span><!-- 得到参加的总人数 -->
 				</p>
-				<p style="margin-left:20px;margin-top:12px;">已登录学生数量:<span><%=login_count %></span><!-- 得到已经登录的总人数 -->，
+				<p style="margin-left:35px;margin-top:12px;font-size: 17px;">已登录学生数量:<span><%=login_count %></span><!-- 得到已经登录的总人数 -->，
 				未登录的学生数量：<span><%=null_login %></span><!-- 得到未登录的总人数，两者相减 -->
 				</p>
-				<p style="margin-left:20px;margin-top:12px;">已登录学生中，提交文件学生数量:<span><%=submit_count %></span><!-- 得到提交文件的学生数量-->，
+				<p style="margin-left:35px;margin-top:12px;font-size: 17px;">已登录学生中，提交文件学生数量:<span><%=submit_count %></span><!-- 得到提交文件的学生数量-->，
 				未提交文件学生的数量：<span><%=null_submit %></span><!-- 两者相减 -->
 				</p>
 			</div>

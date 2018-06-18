@@ -15,7 +15,7 @@ tr {
 }
 </style>
 </head>
-<body>
+<body style="background-image:url(../../image/background/h13.jpg);background-size:cover;">
 	<%	
 	
 		String username=request.getParameter("edit_username");
@@ -54,7 +54,7 @@ tr {
 			</tr>
 			<tr>
 				<td></td>
-				<td style="padding-left: 20px"><button class="btn btn-info"  type="submit">修改</button></td>
+				<td style="padding-left: 20px"><button class="btn btn-primary"  type="submit">修改</button></td>
 			</tr>
 		</table>
 		</form>

@@ -26,7 +26,7 @@ body {
 </style>
 
 </head>
-<body>
+<body style="background-image:url(../image/background/p3.jpg);background-size:cover;">
 <nav class="navbar-nav navbar-fixed-top" role="navigation">
 	<div class="container">
 		<div class="navbar-header">
@@ -35,17 +35,20 @@ body {
 		</div>
 		<div class="collapse navbar-collapse" id="example-navbar-collapse">
 			<ul id="main_nav" class="nav nav-pills">
-				<li class="active"><a href="#student" data-toggle="tab" style="height:50px;">学生登录</a></li>
-				<li><a href="#teacher" data-toggle="tab" style="height:50px;">教师登录</a></li>
-				<li><a href="#admin" data-toggle="tab" style="height:50px;">管理员登录</a></li>
-				<li class="nav navbar-right"> 
+				<li class="active"><a href="#student" data-toggle="tab" style="height:50px;color:white;">学生登录</a></li>
+				<li><a href="#teacher" data-toggle="tab" style="height:50px;color:white;">教师登录</a></li>
+				<li><a href="#admin" data-toggle="tab" style="height:50px;color:white;">管理员登录</a></li>
+				<li class="nav navbar-right" style="font-size: 29px; margin-top:10px;margin-right:-45px;">
+					<em style="margin-right:-55px; color:#ff8000;">Welcome to On Board Examination System</em>
+				</li>
+				<!-- <li class="nav navbar-right"> 
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="height:50px;">
 					<b class="glyphicon glyphicon-user"></b> 欢迎您  <b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li><a href="#">For Newer</a></li>
 						<li><a href="#">Other</a></li>
 					</ul>
-				</li>
+				</li> -->
 			</ul>					
 			<div id="myTabContent" class="tab-content" style="margin-top: 90px">
 				<div class="tab-pane fade in active" id="student">

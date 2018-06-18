@@ -83,16 +83,26 @@ public class FenYe_Teacher extends HttpServlet {
 		// 取出本页的数据
 		for (int i = (currpage - 1) * pageSize; i < list.size() && i < currpage * pageSize; i++) {
 			Teacher teacher = list.get(i);
-			sb1.append("<tr><td>"+teacher.getT_username()+"</td>");
-			sb1.append("<td>"+teacher.getT_name()+"</td>");
-			if(teacher.getT_manager() == true)
+			sb1.append("<tr><td>");
+			sb1.append(teacher.getT_username());
+			sb1.append("</td><td>");
+			sb1.append(teacher.getT_name());
+			sb1.append("</td><td>");
+			/*if(teacher.getT_manager() == true)
 			{
-				sb1.append("<td>" + "<span class=\"glyphicon glyphicon-ok\"></span>" + "</td><td>");
+				sb1.append("<td>" + "是" + "</td></tr>");
 			}
 			else {
-				sb1.append("<td>" + "" + "</td><td>");
+				sb1.append("<td>" + "否" + "</td></tr>");
+			}*/
+			if(teacher.getT_manager()){
+				sb1.append("<span class=\"glyphicon glyphicon-ok\"></span>");
+			}else{
+				sb1.append("");
 			}
-			sb1.append("<a href='admin_editTeacher.jsp?edit_username="+teacher.getT_username()+"&edit_name="+teacher.getT_name()+"&edit_password="+teacher.getT_pwd()+"'><span class='glyphicon glyphicon-edit' title='编辑'></span></a>");
+			//添加对教师的编辑和删除功能  ---@yy
+			sb1.append("</td><td>");
+			sb1.append("<a href='admin_editTeacher.jsp?edit_username="+teacher.getT_username()+"&edit_name="+teacher.getT_name()+"'><span class='glyphicon glyphicon-edit' title='编辑'></span></a>");
 			sb1.append("&nbsp&nbsp&nbsp");
 			sb1.append("<a href='../../admin_deleteTeacher?delete_username="+teacher.getT_username()+"'><span class='glyphicon glyphicon-trash' title='删除'></span></a>");
 			sb1.append("</td></tr>");

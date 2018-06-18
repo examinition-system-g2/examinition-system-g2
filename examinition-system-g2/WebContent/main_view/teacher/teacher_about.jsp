@@ -10,7 +10,7 @@
 	out.print(error);
 	session.setAttribute("teacher_error", "");
 	%>
-<body>
+<body style="background-image:url(../../image/background/h6.jpg);background-size:cover;">
 	<jsp:include page="teacher_index.jsp"></jsp:include>
 	<div class="container">
 	<div class="panel panel-success" style="margin-top:10px;margin-left:8px;">

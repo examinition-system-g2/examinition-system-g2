@@ -3,7 +3,7 @@
 }
 
 .navbar {
-	background-color:#dfdfdf;
+	background-color:#ff8000;
 }
 
 .glyphicon glyphicon-user{
@@ -20,6 +20,12 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
+}
+.vertical-right {
+    position: absolute;
+    top: 50%;
+    left: 80%;
     transform: translate(-50%, -50%);
 }
 .row {

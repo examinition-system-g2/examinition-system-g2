@@ -10,6 +10,13 @@ public class Exam {
 	private boolean e_file;//考试是否已归档
 	private boolean e_clear;//考试是否已清理
 	private boolean e_isstart;
+	/*private int e_id;
+	public int getE_id() {
+		return e_id;
+	}
+	public void setE_id(int e_id) {
+		this.e_id = e_id;
+	}*/
 	public boolean getE_isstart() {
 		return e_isstart;
 	}

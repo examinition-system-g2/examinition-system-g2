@@ -50,7 +50,7 @@ public class teacher_unlocked extends HttpServlet {
 				if(!stu.getStu_ip().equals("null"))
 				{
 					sb.append("<td>"+stu.getStu_ip()+"</td>");
-					sb.append("<td>"+"<a href='../../Teacherunlockip?id="+stu.getStu_id()+"' class='glyphicon glyphicon-edit btn btn-info'>解除绑定</a>"+"</td></tr>");
+					sb.append("<td>"+"<a href='../../Teacherunlockip?id="+stu.getStu_id()+"' class='glyphicon glyphicon-edit btn btn-primary'>解除绑定</a>"+"</td></tr>");
 				}
 					
 				else
