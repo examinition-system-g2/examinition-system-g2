@@ -34,6 +34,7 @@
 				<th class="col-md-3">学号</th>
 				<th class="col-md-3">姓名</th>
 				<th class="col-md-3">班级</th>
+				<th class="col-md-3">考试</th>
 			</tr>
 			<%
 				StringBuilder sb = (StringBuilder) session.getAttribute("info");
