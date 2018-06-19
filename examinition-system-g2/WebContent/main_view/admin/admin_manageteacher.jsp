@@ -10,12 +10,12 @@
 <body style="background-image:url(../../image/background/h13.jpg);background-size:cover;">
 	<jsp:include page="admin_head.jsp"></jsp:include>
 	<div class="container">		
-		<table class="table table-bordered" style="margin-top: 10px">
+		<table class="table table-bordered" style="margin-top: 10px;background-color:#eeeeee" >
 			<tr>
 				<th class="col-md-3">用户名</th>
 				<th class="col-md-3">全名</th>
 				<th class="col-md-3">是否为管理员</th>
-				<th class="col-md-3"></th>
+				<th class="col-md-3">编辑</th>
 			</tr>
 			<%
 				StringBuilder sbinfo = (StringBuilder) session.getAttribute("info");

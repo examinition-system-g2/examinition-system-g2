@@ -61,6 +61,7 @@ public class TeacherLogin extends HttpServlet {
 				session.setAttribute("teacher", id);
 				response.sendRedirect("main_view/teacher/teacher_about.jsp");
 			}else{
+				System.out.println("Here!");
 				response.sendRedirect("login/main_login.jsp");
 			}
 		}else
