@@ -47,7 +47,7 @@ public class teacher_clearexam extends HttpServlet {
 			String sql = "delete from student where stu_exam='" + examname + "'";
 			DbUtil.executeUpdate(sql);
 			DbUtil.close();
-			String savePath = this.getServletContext().getRealPath("/WEB-INF/upload/" + examname);
+			String savePath = this.getServletContext().getRealPath("/WEB-INF/" + examname);
 			File file = new File(savePath);
 			// 判断上传文件的保存目录是否存在
 			if (file.exists()) {// 判断文件是否存在

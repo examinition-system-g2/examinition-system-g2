@@ -57,7 +57,7 @@ public class student_Upload extends HttpServlet {
 		filenames=student.getStu_submit();
 		
 		// 得到上传文件的保存目录，将上传的文件存放于F目录下，不允许外界直接访问，保证上传文件的安全
-		String savePath = this.getServletContext().getRealPath("/WEB-INF/upload/" + examname);
+		String savePath = this.getServletContext().getRealPath("/WEB-INF/" + examname);
 		File file = new File(savePath);
 		// 判断上传文件的保存目录是否存在
 		if (!file.exists() && !file.isDirectory()) {

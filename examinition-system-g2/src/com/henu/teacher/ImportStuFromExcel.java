@@ -59,7 +59,7 @@ public class ImportStuFromExcel extends HttpServlet {
 		HttpSession session = request.getSession();
 		String examname = (String) session.getAttribute("examname");
 		// 得到上传文件的保存目录，将上传的文件存放于F目录下，不允许外界直接访问，保证上传文件的安全
-		String savePath = this.getServletContext().getRealPath("/WEB-INF/upload/" + examname);
+		String savePath = this.getServletContext().getRealPath("/WEB-INF/" + examname);
 		File file = new File(savePath);
 		// 判断上传文件的保存目录是否存在
 		if (!file.exists() && !file.isDirectory()) {
@@ -134,7 +134,7 @@ public class ImportStuFromExcel extends HttpServlet {
 		}
 		System.out.println(message);
 		//
-		String path = this.getServletContext().getRealPath("/WEB-INF/upload/" + examname+"/"+filename);
+		String path = this.getServletContext().getRealPath("/WEB-INF/" + examname+"/"+filename);
 		List<Student> list = GetDataFromExcel.getAllByExcel(path);
 		try {
 			for(Student student : list){
