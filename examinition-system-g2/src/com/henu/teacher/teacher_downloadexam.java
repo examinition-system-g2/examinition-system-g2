@@ -40,8 +40,8 @@ public class teacher_downloadexam extends HttpServlet {
 		String id = request.getParameter("id");
 		Exam exam = DaoFactory.getExamDaoInstance().search(examname);
 		exam.setE_file(true);
-		String savePath = this.getServletContext().getRealPath("/WEB-INF/upload/" + examname);
-		String zipFilePath=this.getServletContext().getRealPath("/WEB-INF/upload");
+		String savePath = this.getServletContext().getRealPath("/WEB-INF/" + examname);
+		String zipFilePath=this.getServletContext().getRealPath("/WEB-INF");
 		boolean flag = ToZip.fileToZip(savePath, zipFilePath, examname);
 		if(flag)
 			System.out.println("压缩成功");
